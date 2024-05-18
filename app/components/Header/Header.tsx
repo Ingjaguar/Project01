@@ -1,32 +1,34 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
 	return (
 		<header className="">
             <nav className="bg-sky-800 border-gray-200 rounded-lg">
 				<div className="flex flex-wrap items-center justify-between mx-auto p-4">
-					<a
-						href="/"
-						className="flex items-center space-x-3 rtl:space-x-reverse"
+					<Link href="/"
+					      className="flex items-center space-x-3 rtl:space-x-reverse"
 					>
-						<img
+						<Image
 							src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png"
-							className="h-8"
 							alt="ReactLogo"
+							className="h-8"
+							width={50}
+							height={50}
 						/>
 						<span className="self-center text-2xl font-semibold whitespace-nowraps">
 							Wiki React
 						</span>
-					</a>
+					</Link>
 					<div className="flex md:order-2">
 						<div className="relative md:block">
 							<div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-								<img
-									width="20"
-									height="20"
+								<Image
 									src="https://img.icons8.com/ios/50/search--v1.png"
-									alt="search--v1"
+									alt="Icon"
+									width={20}
+									height={20}
 								/>
 							</div>
 							<input
