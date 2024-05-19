@@ -17,7 +17,7 @@ export default function Header() {
 							width={50}
 							height={50}
 						/>
-						<span className="self-center text-2xl font-semibold whitespace-nowraps">
+						<span className="self-center text-2xl font-semibold whitespace-nowraps text-gray-100">
 							Wiki React
 						</span>
 					</Link>

@@ -15,16 +15,22 @@ async function getData() {
 }
 
 interface Todos {
+	id: number;
 	title: string;
 }
 
 export default async function page() {
 	const todos: Todos[] = await getData();
+	const listItems = todos.map(todo =>
+		<li key={todo.id}>
+			<p>{todo.id} - {todo.title}</p>
+		</li>
+	);
 	
-	return(
+	return (
 		<>
 			<Header />
-			{todos.map(todo => <p>{todo.title}</p>)}
+			<ul>{listItems}</ul>
 		</>
 	);
 }
